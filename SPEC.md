@@ -2,6 +2,7 @@
 
 - **spec_id:** `rapp-eternity/1.0`
 - **home:** `kody-w/rapp-eternity/SPEC.md`
+- **canonical_home:** `kody-w/rapp-eternity` is the **SINGLE canonical home** of `rapp-eternity/1.0`. Any copy that appears in **RAPP-Bible**, **rapp-egg-hub**, or **rapp-moment** is a **mirror** of this document, never an authority; on any discrepancy, `kody-w/rapp-eternity/SPEC.md` governs.
 - **status:** living (locked 2026-06-28)
 - **layer:** identity (foundational)
 - **supersedes:** the ownership clause of `rapp-moment/SPEC.md` §6 ("a key is an identity"); unifies the record fields of `rapp-rappid-spec/2.0` (rapp-egg-hub)
@@ -16,6 +17,8 @@
 ### 0.1 What this document is
 
 This is **THE** identity standard for the RAPP estate. Anything that has a name and an owner — a Moment, an egg, an agent, a twin, a neighborhood, an estate node — is named by a **rappid** and the rules here govern how that rappid is computed, written, read, matched, owned, and transferred.
+
+**`kody-w/rapp-eternity` is the single canonical home of this standard.** This document at `kody-w/rapp-eternity/SPEC.md` is the one authoritative source of `rapp-eternity/1.0`. Copies hosted in **RAPP-Bible**, **rapp-egg-hub**, **rapp-moment**, or anywhere else are **mirrors** — convenience reflections that MUST track this home and carry no independent authority. Where any mirror disagrees with this document, this document governs.
 
 The keywords **MUST**, **MUST NOT**, **SHOULD**, **MAY**, and **RESERVED** are used per RFC 2119.
 
@@ -282,4 +285,4 @@ The `rappid` is **byte-identical** to (A) — the sovereignty fields are outside
 
 ## Appendix — One-paragraph summary for an LLM
 
-A **rappid** is forever: it is the full, untruncated, lowercase **SHA-256 of an item's canonical content** (never of a public key), written as `rappid:@owner/slug:64hex`. Default ownership is **gh-collaborator + file possession** with `sig_suite: "none"`, which is conformant permanently. A keypair is **optional opt-in sovereignty** (takedown/death survivability) that **no component may ever require**. "No mandatory PKI" and "un-shutdownable" coexist because un-shutdownability comes from **substrate redundancy + content-addressing**, not keys. Readers **parse every legacy form forever, match only on the hash, and never rewrite identity in place**; writers **emit only the canonical form**. This document is the estate's single identity standard and supersedes the "a key is an identity" framing of rapp-moment §6.
+A **rappid** is forever: it is the full, untruncated, lowercase **SHA-256 of an item's canonical content** (never of a public key), written as `rappid:@owner/slug:64hex`. Default ownership is **gh-collaborator + file possession** with `sig_suite: "none"`, which is conformant permanently. A keypair is **optional opt-in sovereignty** (takedown/death survivability) that **no component may ever require**. "No mandatory PKI" and "un-shutdownable" coexist because un-shutdownability comes from **substrate redundancy + content-addressing**, not keys. Readers **parse every legacy form forever, match only on the hash, and never rewrite identity in place**; writers **emit only the canonical form**. This document — hosted at its single canonical home `kody-w/rapp-eternity` (RAPP-Bible, rapp-egg-hub, and rapp-moment hold mirrors only) — is the estate's single identity standard and supersedes the "a key is an identity" framing of rapp-moment §6.
