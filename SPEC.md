@@ -6,9 +6,19 @@ This file is a tombstone, not a specification or a compatibility profile. The
 former `rapp-eternity/1.0` rules are withdrawn from the active RAPP surface.
 Normative words in the historical version have no present authority.
 
-## 1. Authority and status
+## 1. Federal subordination and technical authority
 
-For this retirement, the sole pinned authority is
+### 1.1 Federal subordination
+
+Under RAPP rev-5 §11 (Federal Constitution Art. VII), this historical repository
+declares federal subordination to
+[`kody-w/RAPP`](https://github.com/kody-w/RAPP). This declaration is a
+governance relationship. It does not make this repository a Router/Mirror,
+technical specification authority, registry, or trust anchor.
+
+### 1.2 Exact technical authority and status
+
+Separately, the sole pinned technical authority for this retirement is
 [`kody-w/rapp-1@6723c7add2aed36bb68992fc71a56b0a4bd5ad81`](https://github.com/kody-w/rapp-1/tree/6723c7add2aed36bb68992fc71a56b0a4bd5ad81).
 Its normative file is
 [`SPEC.md`](https://github.com/kody-w/rapp-1/blob/6723c7add2aed36bb68992fc71a56b0a4bd5ad81/SPEC.md),
@@ -24,16 +34,36 @@ The protocol name is **RAPP**. `rapp/1` is the wire/spec token. The repository
 name `rapp-1` and the informal label “RAPP1” do not establish another protocol
 or another authority.
 
-## 2. Disposition of the former rules
+## 2. §13 trust acceptance: `NOT_ESTABLISHED`
+
+No authenticated §13 evidence is present in this repository or supplied by this
+retirement:
+
+- no out-of-band `estate_owner` rappid anchor or SPKI whose
+  `Hb("rapp/1:rappid", SPKI_DER)` tail has been verified against that anchor;
+- no authenticated registry bytes, detached owner signature, or verified
+  `registry_seq` with a persisted no-rollback high-water mark;
+- no §13.2 time-scoped owner-succession evidence or authenticated §13.3
+  re-anchor chain; and
+- no canonical-source or provenance-stamped registry retrieval, freshness
+  observation, staleness policy, or latest-sequence evidence.
+
+Accordingly, §13 registry/trust acceptance is **`NOT_ESTABLISHED`** and
+**owner-blocked**. Nothing in this repository is an accepted registry, anchor,
+owner designation, succession record, freshness proof, or authorization.
+Federal subordination (§1.1), a technical spec hash (§1.2), and a historical
+tombstone are not substitutes for authenticated trust inputs.
+
+## 3. Disposition of the former rules
 
 | Former `rapp-eternity/1.0` rule | Disposition under the pinned RAPP authority |
 |---|---|
 | Identity tail was the SHA-256 of a selected canonical content body. | Retired. RAPP §5 domain-separates addresses, and §6.2 mints the identity tail exactly once with `Hb("rapp/1:rappid", …)`. |
 | A key could never be required; GitHub collaboration plus file possession was the permanent ownership default. | Retired. RAPP permits both keyless and keyed minting, but authorship and operations that require signatures follow §10, while key discovery, revocation, succession, and ownership resolve through §13. |
 | Every legacy form remained valid forever and readers matched on a content hash without migrating stored identity. | Retired. RAPP §6.3 defines canonicalization-on-read and provisional identifiers; §12 requires total migration and deletion of old live forms rather than perpetual backward compatibility. |
-| `rapp-eternity/1.0` was the estate-wide identity authority. | Withdrawn. This repository is historical and subordinate to the pinned RAPP authority. |
+| `rapp-eternity/1.0` was the estate-wide identity authority. | Withdrawn. This repository is historical, federally subordinate to `kody-w/RAPP`, and technically subordinate to the pinned `kody-w/rapp-1` authority. |
 
-## 3. Exact identity pointer
+## 4. Exact identity pointer
 
 Implementations must use
 [RAPP §6](https://github.com/kody-w/rapp-1/blob/6723c7add2aed36bb68992fc71a56b0a4bd5ad81/SPEC.md#6-identity--the-rappid-l2)
@@ -57,7 +87,7 @@ lowercase hexadecimal characters. The self-locating form is the only conformant
 form. This quotation is deliberately non-normative; on any discrepancy, the
 pinned authority governs.
 
-## 4. Exact minting pointer
+## 5. Exact minting pointer
 
 RAPP §5 defines:
 
@@ -80,7 +110,7 @@ This repository mints nothing. It supplies no owner key, SPKI, estate-owner
 rappid, registry entry, tombstone, signature, or re-anchor record. None may be
 inferred from this retirement commit.
 
-## 5. Migration and trust pointers
+## 6. Migration and trust pointers
 
 - [RAPP §10](https://github.com/kody-w/rapp-1/blob/6723c7add2aed36bb68992fc71a56b0a4bd5ad81/SPEC.md#10-trust-and-signatures-l2)
   governs detached, unencoded JWS signatures, registry-based SPKI discovery,
@@ -99,7 +129,7 @@ registry, or executable producer/consumer, there is no local operational object
 to migrate or re-anchor. Any estate-wide owner-authorized action remains the
 authority owner's work and is not fabricated here.
 
-## 6. Historical preservation
+## 7. Historical preservation
 
 The superseded README and 288-line specification remain available through Git
 history at
